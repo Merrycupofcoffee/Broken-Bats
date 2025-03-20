@@ -1,18 +1,28 @@
-export default function Home() {
-  return (
-    <main className="relative flex flex-col items-center justify-center min-h-screen text-center">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
-           style={{ backgroundImage: "url('/bb3.jpg')" }} />
-      
+import Image from 'next/image';
 
-      {/* Content */}
-      <h1 className="relative text-6xl sm:text-7xl lg:text-8xl font-bold text-yellow-500">
-        Welcome to Broken Bats
-      </h1>
-      <p className="relative mt-4 text-xl sm:text-2xl text-black-500">
-        We're Built Different
-      </p>
+export default function Gallery() {
+  return (
+    <main className="gallery-container">
+      {/* Gallery Header */}
+      <h1 className="gallery-header">Gallery</h1>
+
+      {/* Gallery Grid */}
+      <div className="gallery-grid">
+        {/* Add images to the grid */}
+        <div className="gallery-item">
+          <Image src="/bb1.jpg" alt="Image 1" width={300} height={200} className="gallery-image" />
+        </div>
+        <div className="gallery-item">
+          <Image src="/bb2.jpg" alt="Image 2" width={300} height={200} className="gallery-image" />
+        </div>
+        <div className="gallery-item">
+          <Image src="/bb4.jpg" alt="Image 3" width={300} height={200} className="gallery-image" />
+        </div>
+        <div className="gallery-item">
+          <Image src="/bb5.jpg" alt="Image 4" width={300} height={200} className="gallery-image" />
+        </div>
+        {/* Add more images as needed */}
+      </div>
     </main>
   );
 }
