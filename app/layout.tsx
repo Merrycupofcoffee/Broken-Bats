@@ -25,12 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} bg-gray-900 text-white`}
+    >
+      <body className="min-h-screen flex flex-col">
+        {/* Navbar */}
         <Navbar />
-        <main className = "relative overflow-hidden">
-        {children}
+
+        {/* Main Content */}
+        <main className="flex-grow relative overflow-hidden">
+          {children}
         </main>
+
+        {/* Footer */}
         <Footer />
       </body>
     </html>
